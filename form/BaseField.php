@@ -1,6 +1,6 @@
 <?php
-namespace App\Core\Form;
-use App\Core\Model;
+namespace JDS\CoreMVC\Form;
+use JDS\CoreMVC\Model;
 
 abstract class BaseField {
 	abstract public function renderInput() : string ;

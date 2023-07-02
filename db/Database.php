@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Core\DB;
-use App\Core\Application;
+namespace JDS\CoreMVC\DB;
+use JDS\CoreMVC\Application;
 
 use \PDO;
-// use App\Core\Application;
+// use JDS\CoreMVC\Application;
 class Database {
 	private PDO $dbHandler;
 	private $statement;

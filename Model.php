@@ -1,5 +1,5 @@
 <?php
-namespace App\Core;
+namespace JDS\CoreMVC;
 
 abstract class Model {
 	public const RULE_REQUIRED = 'required';

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core;
+namespace JDS\CoreMVC;
 
 class Session {
 	protected const FLASH_MSG = 'flash_messages';

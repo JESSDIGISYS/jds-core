@@ -1,7 +1,7 @@
 <?php
-namespace App\Core;
-use App\Core\Application;
-use App\Core\Middlewares\BaseMiddleware;
+namespace JDS\CoreMVC;
+use JDS\CoreMVC\Application;
+use JDS\CoreMVC\Middlewares\BaseMiddleware;
 
 class Controller {
 
@@ -10,7 +10,7 @@ class Controller {
 
 	/**
 	 * 
-	 * @var APP\Core\Middlewares\BaseMiddleware[]
+	 * @var JDS\CoreMVC\Middlewares\BaseMiddleware[]
 	 */
 	protected array $middlewares;
 	
@@ -30,7 +30,7 @@ class Controller {
 	/**
 	 * Get the value of middlewares
 	 *
-	 * @return  APP\Core\Middlewares\BaseMiddleware[]
+	 * @return  JDS\CoreMVC\Middlewares\BaseMiddleware[]
 	 */ 
 	public function getMiddlewares()
 	{

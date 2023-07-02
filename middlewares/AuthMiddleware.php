@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Core\Middlewares;
+namespace JDS\CoreMVC\Middlewares;
 
-use App\Core\Application;
-use App\Core\Exception\ForbiddenException;
+use JDS\CoreMVC\Application;
+use JDS\CoreMVC\Exception\ForbiddenException;
 
 class AuthMiddleware extends BaseMiddleware {
 

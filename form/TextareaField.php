@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Core\Form;
+namespace JDS\CoreMVC\Form;
 
-use App\Core\Model;
+use JDS\CoreMVC\Model;
 
 class TextareaField extends BaseField {
 

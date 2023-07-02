@@ -1,7 +1,7 @@
 <?php
-namespace App\Core\DB;
-use App\Core\Model;
-use App\Core\Application;
+namespace JDS\CoreMVC\DB;
+use JDS\CoreMVC\Model;
+use JDS\CoreMVC\Application;
 
 
 abstract class DbModel extends Model {

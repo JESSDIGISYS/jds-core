@@ -1,6 +1,6 @@
 <?php
-namespace App\Core;
-use App\Core\DB\DbModel;
+namespace JDS\CoreMVC;
+use JDS\CoreMVC\DB\DbModel;
 
 
 abstract class UserModel extends DbModel {

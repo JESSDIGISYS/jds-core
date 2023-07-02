@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Exception;
+namespace JDS\CoreMVC\Exception;
 
 use Exception;
 

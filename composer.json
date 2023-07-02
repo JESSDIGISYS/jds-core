@@ -3,7 +3,7 @@
     "description": "JDS PHP MVC Framework Core",
     "autoload": {
         "psr-4": {
-            "Jds\\PhpmvcCore\\": "src/"
+            "JDS\\CoreMVC\\": "src/"
         }
     },
     "authors": [

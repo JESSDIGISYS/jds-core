@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Core;
+namespace JDS\CoreMVC;
 
-use App\Core\Exception\NotFoundException;
+use JDS\CoreMVC\Exception\NotFoundException;
 
 /**
  * 
  * Class Router
  * 
  * @author Mr J <phpdeveloper@mail.com>
- * @package App\Core
+ * @package JDS\CoreMVC
  */
 class Router {
 
@@ -45,7 +45,7 @@ class Router {
 			return Application::$app->view->renderView($callback);
 		}
 		if (is_array($callback)) {
-			/** @var \App\Core\Controller $controller */
+			/** @var \JDS\CoreMVC\Controller $controller */
 			$controller = new $callback[0]();
 			Application::$app->controller = $controller;
 			$controller->action = $callback[1];

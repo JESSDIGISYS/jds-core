@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Core;
-use App\Core\DB\Database;
+namespace JDS\CoreMVC;
+use JDS\CoreMVC\DB\Database;
 
 
 /**
