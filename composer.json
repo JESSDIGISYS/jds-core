@@ -1,0 +1,16 @@
+{
+    "name": "jds/phpmvc-core",
+    "description": "JDS PHP MVC Framework Core",
+    "autoload": {
+        "psr-4": {
+            "Jds\\PhpmvcCore\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mr J",
+            "email": "phpdeveloper@mail.com"
+        }
+    ],
+    "require": {}
+}
