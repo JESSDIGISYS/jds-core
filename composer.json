@@ -1,5 +1,5 @@
 {
-    "name": "jds/phpmvc-core",
+    "name": "jds/coremvc",
     "description": "JDS PHP MVC Framework Core",
     "autoload": {
         "psr-4": {
