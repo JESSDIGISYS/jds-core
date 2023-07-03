@@ -1,6 +1,12 @@
 <?php
 
 namespace JDS\CoreMVC;
+use JDS\CoreMVC\View;
+use JDS\CoreMVC\Router;
+use JDS\CoreMVC\Request;
+use JDS\CoreMVC\Session;
+use JDS\CoreMVC\Response;
+use JDS\CoreMVC\UserModel;
 use JDS\CoreMVC\DB\Database;
 
 
@@ -15,6 +21,11 @@ use JDS\CoreMVC\DB\Database;
  * @copyright Jessop Digital Systems (JDS) 
  */
 class Application {
+	const EVENT_BEFORE_REQUEST = 'beforeRequest';
+	const EVENT_AFTER_REQUEST = 'afterRequest';
+
+	protected array $eventListeners = [];
+
 	public static string $ROOT_DIR;
 
 	public string $layout = 'main';
@@ -75,6 +86,7 @@ class Application {
 	 * @copyright Jessop Digital Systems (JDS) 
 	 */
 	public function run() {
+		$this->triggerEvent(self::EVENT_BEFORE_REQUEST);
 		try {
 			echo $this->router->resolve();
 		} catch (\Exception $e) {
@@ -82,6 +94,13 @@ class Application {
 			echo $this->view->renderView('_error', [
 				'exception' => $e
 			]);
+		}
+	}
+
+	public function triggerEvent($eventName) {
+		$callbacks = $this->eventListeners[$eventName] ?? [];
+		foreach ($callbacks as $callback) {
+			call_user_func($callback);
 		}
 	}
 
@@ -196,6 +215,10 @@ class Application {
 		echo '<pre>';
 		var_dump($files);
 		echo '</pre>';
+	}
+
+	public function on($eventName, $callback) {
+		$this->eventListeners[$eventName][] = $callback;
 	}
 
 }
