@@ -16,13 +16,15 @@ class Router {
 	protected array $routes = [];
 	public Request $request;
 	public Response $response;
+	public array $menuLabel = [];
 
 	public function __construct(Request $request, Response $response) {
 		$this->request = $request;
 		$this->response = $response;
 	}
 
-	public function get($path, $callback) {
+	public function get($path, $displayLabel, $callback) {
+		$this->menuLabel[] = [$path => $displayLabel]; 
 		$this->routes['get'][$path] = $callback;
 	}
 

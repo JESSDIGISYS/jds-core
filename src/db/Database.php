@@ -29,16 +29,16 @@ class Database {
 			require_once Application::$ROOT_DIR.'/migrations/' . $migration;
 			$className = pathinfo($migration, PATHINFO_FILENAME);
 			$instance = new $className();
-			$this->log("Applying migration $migration");
+			echo $this->log("Applying migration $migration");
 			$instance->up();
-			$this->log("Applied migration $migration");
+			echo $this->log("Applied migration $migration");
 			$newMigrations[] = $migration;
 		}
 
 		 if (!empty($newMigrations)) {
 			$this->saveMigrations($newMigrations);
 		 } else {
-			$this->log('All migrations are applied');
+			echo $this->log('All migrations are applied');
 		 }
 	}
 
@@ -78,7 +78,7 @@ class Database {
 	}
 
 	public function log($message) {
-		echo '[' . date('m-d-Y H:i:s') . '] - ' . $message.PHP_EOL; 
+		return '[' . date('m-d-Y H:i:s') . '] - ' . $message.PHP_EOL; 
 	}
 
 	public function query(string $sql) {
